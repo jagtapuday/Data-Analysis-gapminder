@@ -10,7 +10,7 @@ def Start(data):
     Main=Code.main_class()
     st.title("Gapminder Analysis(Kaggle)")
     st.sidebar.title("Analysis Based On")
-    Option=st.sidebar.selectbox("Select Option",("Select","Based On Country","Based On Region"," General Overview"))
+    Option=st.sidebar.selectbox("Select Option",("Select","Based On Country","Based On Region","General Overview"))
     if Option=="Select":
         Main.main(data,"Select")
     elif Option=="General Overview":

@@ -27,6 +27,7 @@ def Start(data):
         Country = st.sidebar.selectbox("Select Country", tuple(Country))
         st.header("Analysis of " + Country )
         Main.main(data,"Based On Country",Country)
+        print("Done")
 
 if __name__=="__main__":
 

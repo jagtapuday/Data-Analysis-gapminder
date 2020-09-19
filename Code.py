@@ -28,6 +28,7 @@ class plot:
             mean_plt.set_yticklabels(mean_plt.get_ylabel(),size = 10)
             plt.setp(mean_plt.get_xticklabels(), rotation=45)
             fig.tight_layout(pad=2.0)
+            print("")
         st.pyplot(fig)
 
 

@@ -30,8 +30,8 @@ def Start(data):
         print("Done")
 
 if __name__=="__main__":
-
-    @st.cache
+    #streamlit run app.py
+    # @st.cache
     def load_dataset():
         data = pd.read_csv("clean_data.csv")
         print("loaded")

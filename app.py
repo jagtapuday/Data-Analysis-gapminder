@@ -3,6 +3,7 @@ import Code
 import pandas as pd
 global data
 
+
 def Start(data):
     Country = set(data.Country)
     # year = set(data.Year)
@@ -31,7 +32,7 @@ def Start(data):
 
 if __name__=="__main__":
     #streamlit run app.py
-    # @st.cache
+    @st.cache(suppress_st_warning=False)
     def load_dataset():
         data = pd.read_csv("clean_data.csv")
         print("loaded")

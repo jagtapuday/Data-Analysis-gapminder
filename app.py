@@ -10,7 +10,7 @@ def Start(data):
     Main=Code.main_class()
     st.title("Gapminder Analysis(Kaggle)")
     st.sidebar.title("Analysis Based On")
-    Option=st.sidebar.selectbox("Select Option",("Select","General Overview","Based On Region","Based On Country"))
+    Option=st.sidebar.selectbox("Select Option",("Select","Based On Country","Based On Region"," General Overview"))
     if Option=="Select":
         Main.main(data,"Select")
     elif Option=="General Overview":
@@ -33,7 +33,7 @@ if __name__=="__main__":
     @st.cache
     def load_dataset():
         data = pd.read_csv("clean_data.csv")
-        data.drop("Unnamed: 0", axis=1, inplace=True)
+        print("loaded")
         return data
     data = load_dataset()
     Start(data)

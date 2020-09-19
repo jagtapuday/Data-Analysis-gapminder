@@ -4,8 +4,9 @@ import seaborn as sns
 import streamlit as st
 
 
-
+@st.cache
 class plot:
+    # @st.cache(suppress_st_warning=False)
     def Count_Record(self,data):
         sns.set(font_scale=1.5)
         st.header("Overview of dataset.")
@@ -15,6 +16,7 @@ class plot:
         region_count.set_xticklabels(region_count.get_xticklabels(), rotation=20)
         st.pyplot(fig)
 
+    # @st.cache(suppress_st_warning=False)
     def General_Overview(self,data):
         sns.set(font_scale=1.0)
         fig, ax = plt.subplots(5, 1, figsize=(30, 40), )
@@ -31,7 +33,7 @@ class plot:
             print("")
         st.pyplot(fig)
 
-
+    # @st.cache(suppress_st_warning=False)
     def Region_vs_All(self,data,Name=None):
         sns.set(font_scale=1)
         if Name==None:
@@ -67,6 +69,7 @@ class plot:
         for index, col1 in enumerate(col):
             sns.boxplot(data=data, x="region", y=col1, orient="v", ax=ax[index])
 
+    # @st.cache(suppress_st_warning=False)
     def County_wise_Analysis(self,data, Name):
         # sns.set(font=30)
         sns.set(font_scale=3)
@@ -80,9 +83,10 @@ class plot:
         sns.lineplot(data=sub_data, x="Year", y="population", ax=ax[1][0])
         sns.lineplot(data=sub_data, x="Year", y="child_mortality", ax=ax[1][1])
         sns.lineplot(data=sub_data, x="Year", y="gdp", ax=ax[2][0])
-
+        print("In Country...")
         st.pyplot(fig)
         # sns.set(font_scale=None)
+@st.cache(suppress_st_warning=False)
 class main_class:
     def main(self,data,input1=None,input2=None):
         try:

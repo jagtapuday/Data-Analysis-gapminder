@@ -4,7 +4,7 @@ import seaborn as sns
 import streamlit as st
 
 
-@st.cache
+# @st.cache
 class plot:
     # @st.cache(suppress_st_warning=False)
     def Count_Record(self,data):
@@ -86,7 +86,7 @@ class plot:
         print("In Country...")
         st.pyplot(fig)
         # sns.set(font_scale=None)
-@st.cache(suppress_st_warning=False)
+# @st.cache(suppress_st_warning=False)
 class main_class:
     def main(self,data,input1=None,input2=None):
         try:
